@@ -85,6 +85,10 @@ nav {
         background-color: rgb(172, 158, 184);
     }
 
+    .logo {
+        text-align: center; 
+        padding-top: 15px;
+    }
 
     .logo img {
         width: 100px;
