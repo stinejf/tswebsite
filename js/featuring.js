@@ -1,5 +1,5 @@
 async function getFeaturing() {
-    const data = await fetch("../ts.json"); 
+    const data = await fetch("ts.json"); 
     const json = await data.json(); 
 
     const songs = [];
