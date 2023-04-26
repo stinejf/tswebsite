@@ -16,7 +16,7 @@ async function getFeaturing() {
             if (json[i].featuring != "NA") {
                 feat = " (feat. " + json[i].featuring + ")"; 
             }
-            document.getElementById("tracklist_feat").innerHTML += "<div><p class='artist'>" + json[i].artist + "</p><p class='songtitle'>" + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
+            document.getElementById("tracklist_feat").innerHTML += "<div><p class='artist'>" + json[i].artist + " - " + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
             j++;
         }
         if (json[i].album_name == "NA" && json[i].artist == "Taylor Swift") {
@@ -27,7 +27,7 @@ async function getFeaturing() {
             if (json[i].featuring != "NA") {
                 feat = " (feat. " + json[i].featuring + ")"; 
             }
-            document.getElementById("tracklist_other").innerHTML += "<div><p class='artist'>" + json[i].artist + "</p><p class='songtitle'>" + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
+            document.getElementById("tracklist_other").innerHTML += "<div><p class='artist'>" + json[i].artist + " - " + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
             j++;
         }
 
