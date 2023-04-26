@@ -147,3 +147,7 @@ main {
 #cd12 {
     background-color: var(--theme-color-10);
 }
+
+#albumImg {
+    max-width: 225px;
+}
