@@ -5,22 +5,26 @@ async function getAlbums(album) {
     const json = await data.json(); 
 
     const songs = [];
-    const durations = [];  
-    const durationsMinSec = [];
+
     let j = 1; 
+     
     for (let i = 0; i < json.length; i++) {
+        let feat = "";
         if (json[i].album_name == album) {
             songs.push(j + "." + json[i].track_name);
             var minutes = Math.floor(json[i].duration_ms / 60000);
             var seconds = ((json[i].duration_ms % 60000) / 1000).toFixed(0);
             var total = minutes + ":" + (seconds < 10 ? '0' : '') + seconds; 
-            durationsMinSec.push(total); 
-            document.getElementById("tracklist").innerHTML += "<div><p class='songtitle'>" + j + ". " + json[i].track_name + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
+            if (json[i].featuring != "NA") {
+                feat = " (feat. " + json[i].featuring + ")"; 
+            }
+            document.getElementById("tracklist").innerHTML += "<div><p class='songtitle'>" + j + ". " + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
             j++;
         }
     }
     document.getElementById("albumName").innerText = album;
 }
+
 
 function setColors(album) {
     if (album == "Taylor Swift") {

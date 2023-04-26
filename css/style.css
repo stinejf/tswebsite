@@ -1,4 +1,5 @@
 :root {
+    --theme-color-standard:  rgb(172, 158, 184);
     --theme-color-1: #A9CBAA;
     --theme-color-1-2: #0C1A0C;
     --theme-color-2: #FDDAA6;
@@ -19,6 +20,7 @@
     --theme-color-9-2: #2E2327;
     --theme-color-10: #E0EDFD;
     --theme-color-10-2: #1F2E43;
+    
 }
 
 @font-face {
@@ -43,13 +45,16 @@ nav {
     width: 200px;
 }
 
-main {
+.albumMain {
     max-width: 1200px;
     margin: auto;
     text-align: center;
 }
 
 .container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
     display: grid;
     justify-content: center;
     align-content: space-between;
@@ -66,9 +71,18 @@ main {
     max-width: 225px;
 }
 
+.banner {
+    width: 100%;
+    background-color: var(--theme-color-standard);
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+    font-size: 22px;
+    margin-top:40px;
+}
+
 @media only screen and (max-width: 600px) {
     body {
-        background-color: lightblue;
+        background-color: rgb(172, 158, 184);
     }
 
 
@@ -97,6 +111,9 @@ main {
 
     .container div img {
         max-width: 90%;
+    }
+    #frontbanner {
+        background-color: #efefef;
     }
 }
 
