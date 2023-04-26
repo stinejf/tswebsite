@@ -1,0 +1,149 @@
+:root {
+    --theme-color-1: #A9CBAA;
+    --theme-color-1-2: #0C1A0C;
+    --theme-color-2: #FDDAA6;
+    --theme-color-2-2: #1E151A;
+    --theme-color-3: #D6BADC;
+    --theme-color-3-2: #000000;
+    --theme-color-4: #72333C;
+    --theme-color-4-2: #C7B2A2;
+    --theme-color-5: #034A62;
+    --theme-color-5-2: #D1F3FF;
+    --theme-color-6: #2A2628;
+    --theme-color-6-2: #CACACA;
+    --theme-color-7: #FBB3D1;
+    --theme-color-7-2: #3D2D34;
+    --theme-color-8: #D5D5D5;
+    --theme-color-8-2: #000000;
+    --theme-color-9: #E0C9AF;
+    --theme-color-9-2: #2E2327;
+    --theme-color-10: #E0EDFD;
+    --theme-color-10-2: #1F2E43;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf);
+}
+
+body {
+    margin: 0;
+    color: rgb(15, 29, 40);
+    font-family: myFirstFont;
+}
+
+nav {
+    background-color: rgb(172, 158, 184);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: space-between;
+    justify-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+.container div {
+    padding: 30px;
+}
+
+
+.container div img {
+    max-width: 225px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+
+    .logo img {
+        width: 100px;
+    }
+
+    main {
+        max-width: 600px;
+    }
+
+    nav {
+        padding: 5px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        justify-content: start;
+        padding-left:0px;   
+    }
+
+    .container div {
+        padding: 10px;
+    }
+
+    .container div img {
+        max-width: 90%;
+    }
+}
+
+#cd1 {
+    background-color: var(--theme-color-1);
+}
+
+#cd2 {
+    background-color: var(--theme-color-2);
+}
+
+#cd3 {
+    background-color: var(--theme-color-3);
+}
+
+#cd4 {
+    background-color: var(--theme-color-4);
+}
+
+#cd5 {
+    background-color: var(--theme-color-5);
+}
+
+#cd6 {
+    background-color: var(--theme-color-6);
+}
+
+#cd7 {
+    background-color: var(--theme-color-7);
+}
+
+#cd8 {
+    background-color: var(--theme-color-8);
+}
+
+#cd9 {
+    background-color: var(--theme-color-9);
+}
+
+#cd10 {
+    background-color: var(--theme-color-2);
+}
+
+#cd11 {
+    background-color: var(--theme-color-4);
+}
+
+#cd12 {
+    background-color: var(--theme-color-10);
+}
