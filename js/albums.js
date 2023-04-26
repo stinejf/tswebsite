@@ -1,4 +1,4 @@
-  
+let musicVideos = []; 
 
 async function getAlbums(album) {
     const data = await fetch("../ts.json"); 
@@ -11,6 +11,7 @@ async function getAlbums(album) {
     for (let i = 0; i < json.length; i++) {
         let feat = "";
         if (json[i].album_name == album) {
+            
             songs.push(j + "." + json[i].track_name);
             var minutes = Math.floor(json[i].duration_ms / 60000);
             var seconds = ((json[i].duration_ms % 60000) / 1000).toFixed(0);
@@ -18,7 +19,13 @@ async function getAlbums(album) {
             if (json[i].featuring != "NA") {
                 feat = " (feat. " + json[i].featuring + ")"; 
             }
-            document.getElementById("tracklist").innerHTML += "<div><p class='songtitle'>" + j + ". " + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
+            if (json[i].music_video != "") {
+                document.getElementById("tracklist").innerHTML += "<a href='" + json[i].music_video + "' target='_blank' id='mv'><div><p class='songtitle'>" + j + ". " + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div</a>";
+
+            }
+            else {
+                document.getElementById("tracklist").innerHTML += "<div><p class='songtitle'>" + j + ". " + json[i].track_name + feat + "<span class='duration'>" + " (" + total + ") " +"</span></p></div";
+            }
             j++;
         }
     }
@@ -30,6 +37,7 @@ function setColors(album) {
     if (album == "Taylor Swift") {
         document.getElementById("body1").style.backgroundColor = "#A9CBAA";
         document.getElementById("body1").style.color = "#0C1A0C";
+        document.getElementsByTagName("a").style.color = "#0C1A0C";
        // document.getElementById("navbar").style.backgroundColor = "#A9CBAA";
     }
 
